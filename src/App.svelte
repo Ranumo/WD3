@@ -1,138 +1,158 @@
-<script>
+<<script>
 </script>
 
 <main>
   <body>
-    <div class="month">
-      <ul>
-        <li class="prev">&#10094;</li>
-        <li class="next">&#10095;</li>
-        <li>August<br /><span style="font-size:18px">2021</span></li>
-      </ul>
+    <div id="titlerivi" />
+    <div id="hallintarivi" />
+    <div id="kalenteri">
+      <div id="paivarivi">
+        <div class="viikkonimi">Viikko</div>
+
+        <div class="paivanimi">Maanantai</div>
+
+        <div class="paivanimi">Tiistai</div>
+
+        <div class="paivanimi">Keskiviikko</div>
+
+        <div class="paivanimi">Torstai</div>
+
+        <div class="paivanimi">Perjantai</div>
+
+        <div class="paivanimi">Lauantai</div>
+
+        <div class="paivanimi">Sunnuntai</div>
+      </div>
+      <div id="kuukausi">
+        <div class="viikko">1</div>
+
+        <div class="paiva" />
+        <div class="paiva" />
+        <div class="paiva" />
+        <div class="paiva" />
+        <div class="paiva" />
+        <div class="paiva" />
+        <div class="paiva" />
+      </div>
+      <div id="kuukausi">
+        <div class="viikko">2</div>
+
+        <div class="paiva" />
+        <div class="paiva" />
+        <div class="paiva" />
+        <div class="paiva" />
+        <div class="paiva" />
+        <div class="paiva" />
+        <div class="paiva" />
+      </div>
+      <div id="kuukausi">
+        <div class="viikko">3</div>
+
+        <div class="paiva" />
+        <div class="paiva" />
+        <div class="paiva" />
+        <div class="paiva" />
+        <div class="paiva" />
+        <div class="paiva" />
+        <div class="paiva" />
+      </div>
+      <div id="kuukausi">
+        <div class="viikko">4</div>
+
+        <div class="paiva" />
+        <div class="paiva" />
+        <div class="paiva" />
+        <div class="paiva" />
+        <div class="paiva" />
+        <div class="paiva" />
+        <div class="paiva" />
+      </div>
+      <div id="kuukausi">
+        <div class="viikko">5</div>
+
+        <div class="paiva" />
+        <div class="paiva" />
+        <div class="paiva" />
+        <div class="paiva" />
+        <div class="paiva" />
+        <div class="paiva" />
+        <div class="paiva" />
+      </div>
+      <div id="kuukausi">
+        <div class="viikko">6</div>
+
+        <div class="paiva" />
+        <div class="paiva" />
+        <div class="paiva" />
+        <div class="paiva" />
+        <div class="paiva" />
+        <div class="paiva" />
+        <div class="paiva" />
+      </div>
     </div>
-
-    <ul class="weekdays">
-      <li>Mo</li>
-      <li>Tu</li>
-      <li>We</li>
-      <li>Th</li>
-      <li>Fr</li>
-      <li>Sa</li>
-      <li>Su</li>
-    </ul>
-
-    <ul class="days">
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-      <li>5</li>
-      <li>6</li>
-      <li>7</li>
-      <li>8</li>
-      <li>9</li>
-      <li><span class="active">10</span></li>
-      <li>11</li>
-      <li>12</li>
-      <li>13</li>
-      <li>14</li>
-      <li>15</li>
-      <li>16</li>
-      <li>17</li>
-      <li>18</li>
-      <li>19</li>
-      <li>20</li>
-      <li>21</li>
-      <li>22</li>
-      <li>23</li>
-      <li>24</li>
-      <li>25</li>
-      <li>26</li>
-      <li>27</li>
-      <li>28</li>
-      <li>29</li>
-      <li>30</li>
-      <li>31</li>
-    </ul>
   </body>
 </main>
 
 <style>
-  ul {
-    list-style-type: none;
-  }
-  body {
-    font-family: Verdana, sans-serif;
-  }
-
-  /* Month header */
-  .month {
-    padding: 70px 25px;
-    width: 100%;
-    background: #1abc9c;
-    text-align: center;
+  #kuukausi {
+    color: black;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
-  /* Month list */
-  .month ul {
-    margin: 0;
-    padding: 0;
+  #paivarivi {
+    color: black;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
-  .month ul li {
-    color: white;
-    font-size: 20px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+  .paiva {
+    background-color: rgb(172, 226, 237);
+    width: 150px;
+    height: 100px;
+    margin: 5px;
   }
 
-  /* Previous button inside month header */
-  .month .prev {
-    float: left;
-    padding-top: 10px;
+  .paivanimi {
+    width: 150px;
+    height: 50px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  /* Next button */
-  .month .next {
-    float: right;
-    padding-top: 10px;
+  .viikkonimi {
+    width: 150px;
+    height: 50px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  /* Weekdays (Mon-Sun) */
-  .weekdays {
-    margin: 0;
-    padding: 10px 0;
-    background-color: #ddd;
+  .viikko {
+    width: 150px;
+    height: 100px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .weekdays li {
-    display: inline-block;
-    width: 13.6%;
-    color: #666;
-    text-align: center;
+  #titlerivi {
+    background-color: rgb(206, 206, 206);
+    width: 1275px;
+    height: 50px;
+    margin: 5px;
+    margin-bottom: 20px;
   }
 
-  /* Days (1-31) */
-  .days {
-    padding: 10px 0;
-    background: #eee;
-    margin: 0;
-  }
-
-  .days li {
-    list-style-type: none;
-    display: inline-block;
-    width: 13.6%;
-    text-align: center;
-    margin-bottom: 5px;
-    font-size: 12px;
-    color: #777;
-  }
-
-  /* Highlight the "current" day */
-  .days li .active {
-    padding: 5px;
-    background: #1abc9c;
-    color: white !important;
+  #hallintarivi {
+    background-color: rgb(143, 143, 143);
+    width: 1275px;
+    height: 50px;
+    margin: 5px;
+    margin-bottom: 20px;
   }
 </style>
