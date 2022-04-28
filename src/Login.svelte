@@ -22,6 +22,10 @@
     <button on:click={LogIn}>Login</button>
   {/if}
   {#if login == 1}
+    <div>
+      <p>Tervetuloa &#60 käyttäjänimi &#62</p>
+    </div>
+
     <button on:click={LogOut}>Logout</button>
   {/if}
 </main>
