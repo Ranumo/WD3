@@ -1,5 +1,8 @@
 <script>
   import Login from './Login.svelte';
+  import AddEvent from './AddEvent.svelte';
+
+  let showAddWindow = true;
 </script>
 
 <main>
