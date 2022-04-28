@@ -1,6 +1,5 @@
 <script>
   import { scale } from 'svelte/transition';
-
 </script>
 
 <div class="backdrop" on:click />
@@ -29,11 +28,11 @@
   }
 
   .modal {
-    padding: 1rem;
+    padding: 2rem;
     position: fixed;
     top: 10vh;
     right: 10%;
-    width: 200px;
+    width: 600px;
     max-height: 80vh;
     background: white;
     border-radius: 5px;
@@ -51,5 +50,4 @@
     margin-top: 2em;
     padding-top: 1em;
   }
-
 </style>

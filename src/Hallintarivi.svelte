@@ -2,7 +2,22 @@
   import Login from './Login.svelte';
   import AddEvent from './AddEvent.svelte';
 
-  let showAddWindow = true;
+  let otsikko = '';
+  let alkuAika;
+  let loppuAika;
+  let pv;
+  let loppupv;
+  let lisatiedot;
+
+  let showAddWindow = false;
+
+  function showWindow() {
+    showAddWindow = true;
+  }
+  function submitWindow() {}
+  function hideWindow() {
+    showAddWindow = false;
+  }
 </script>
 
 <main>
@@ -31,8 +46,20 @@
         </div>
       </div>
       <h4>Tammikuu</h4>
-      <div id="lisays">+Lisää tapahtuma</div>
+      <button id="lisays" on:click={showWindow}>+Lisää tapahtuma</button>
     </div>
+    {#if showAddWindow}
+      <AddEvent
+        bind:otsikko
+        bind:alkuAika
+        bind:loppuAika
+        bind:pv
+        bind:loppupv
+        bind:lisatiedot
+        on:tallenna={submitWindow}
+        on:peruuta={hideWindow}
+      />
+    {/if}
   </body>
 </main>
 
