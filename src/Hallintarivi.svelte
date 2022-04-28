@@ -2,6 +2,8 @@
   import Login from './Login.svelte';
   import AddEvent from './AddEvent.svelte';
 
+  let tietokanta = [];
+
   let otsikko = '';
   let alkuAika;
   let loppuAika;
@@ -14,10 +16,23 @@
   function showWindow() {
     showAddWindow = true;
   }
-  function submitWindow() {}
+  function submitWindow() {
+    tietokanta.push(tapahtumaTiedot);
+    console.log(tapahtumaTiedot);
+    showAddWindow = false;
+  }
   function hideWindow() {
     showAddWindow = false;
   }
+
+  $: tapahtumaTiedot = {
+    otsikko: otsikko,
+    alkuAika: alkuAika,
+    loppuAika: loppuAika,
+    pv: pv,
+    loppupv: loppupv,
+    lisatiedot: lisatiedot,
+  };
 </script>
 
 <main>
