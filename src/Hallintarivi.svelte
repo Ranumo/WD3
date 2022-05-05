@@ -33,6 +33,10 @@
     loppupv: loppupv,
     lisatiedot: lisatiedot,
   };
+  var Kuukaudet = [ "Tammikuu", "Helmikuu", "Maaliskuu", "Huhtikuu", "Toukokuu", "Kesäkuu", 
+           "Heinäkuu", "Elokuu", "Syyskuu", "Lokakuu", "Marraskuu", "Joulukuu" ];
+           let day = new Date()
+  day.getDate()
 </script>
 
 <main>
@@ -60,7 +64,7 @@
           <h3>Seuraava viikko &#62</h3>
         </div>
       </div>
-      <h4>Tammikuu</h4>
+      <h4>{Kuukaudet[day.getMonth()]}</h4>
       <button id="lisays" on:click={showWindow}>+Lisää tapahtuma</button>
     </div>
     {#if showAddWindow}

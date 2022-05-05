@@ -1,10 +1,8 @@
 <script>
   import Modal from './Modal.svelte';
   import Button from './Button.svelte';
-
   import { createEventDispatcher } from 'svelte';
   const dispatch = createEventDispatcher();
-
   const tallenna = () =>
     dispatch('tallenna', {
       otsikko: otsikko,
@@ -13,17 +11,17 @@
       pv: pv,
       loppupv: loppupv,
       lisatiedot: lisatiedot,
+      muistutus: muistutus,
     });
   const peruuta = () => dispatch('peruuta');
-
   export let otsikko = '';
   export let alkuAika;
   export let loppuAika;
   export let pv;
   export let loppupv;
   export let lisatiedot;
-
   export let toistuvuus = 'ei';
+  export let muistutus = 'pv';
 </script>
 
 <Modal>
@@ -75,6 +73,15 @@
       <option value="vko"> Viikoittain </option>
       <option value="kk"> Kuukausittain </option>
       <option value="vuosi"> Vuosittain </option>
+    </select>
+  </label>
+
+  <label>
+    Muistutus
+    <select bind:value={muistutus}>
+      <option value="ei">Ei muistutusta</option>
+      <option value="tunti"> Tuntia aiemmin </option>
+      <option value="pv"> Päivää aiemmin </option>
     </select>
   </label>
 
